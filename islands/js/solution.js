@@ -11,15 +11,15 @@
      */
     function solution(map) {
         // todo: подсчитать кол-во островов на карте
-        
+       
         var n = root.SHRI_ISLANDS.MAP.length;
         var m = root.SHRI_ISLANDS.MAP[0].length;
-        
+       
         //создаем рабочий массив - копия карты с рамкой-буфером из нулей, чтобы 
         //постоянно не проверять выход за границы при поиске в глубину
         var myMap=[];
         myMap[0] = []; 
-        for (var j=0; i<m+2; j++)  {
+        for (var j=0; j<m+2; j++)  {
             myMap[0][j] = 0;
         }
         for (var i=1; i<n+1; i++)  {
@@ -31,13 +31,13 @@
             myMap[i][m+1] = 0;
         }
         myMap[n+1] = [];
-        for (var j=0; i<m+2; j++)  {
+        for (var j=0; j<m+2; j++)  {
             myMap[n+1][j] = 0;
         }
         
         
         var isleCounter = 0;
-        
+       
         //поиск в глубину (ищем все клетки острова)
         function findIsle(x,y) {
             if (myMap[x][y]==1) {
