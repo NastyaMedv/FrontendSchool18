@@ -39,3 +39,9 @@ body {
 .map__cell_island {
     background-color: #fad946;
 }
+
+#visual {
+    background-color: transparent;
+    position: absolute;
+    margin: 46px 0px 0px 10px;
+}
