@@ -96,8 +96,10 @@
                 else { color = '#203ce7'; }
             cells[number].style.border = '1px solid '+color; 
             timer++;
+            if (timer==history[0].length) 
+                {clearInterval(timerId);}
             }, 500);
-        
+  
         
         return;
     }
