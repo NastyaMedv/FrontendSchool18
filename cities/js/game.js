@@ -54,6 +54,7 @@ function isCity(name) {
             answer = true;
             var j = cityHistory.length;
             cityHistory[j] = i;     
+            break;
             }   
     }
     return answer;
