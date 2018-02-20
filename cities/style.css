@@ -7,7 +7,7 @@ body {
 }
 
 .outer {
-    margin: 100px auto 100px auto;
+    margin: 60px auto 60px auto;
     padding: 50px;
     width: 900px;
     background-color: white;
@@ -69,10 +69,15 @@ body {
 
 #computer, #player {
     list-style-type: none;
+    border-left: 2px dotted rgb(230, 20, 0);
 }
 
 #map {
     width: 900px;
     height: 300px;
     margin-top: 50px;
+}
+
+#winner span {
+    color: rgb(230, 20, 0);
 }

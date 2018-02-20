@@ -11,7 +11,7 @@ function findAnswer() {
         }
     
     if (!isCity(playerCity)) {
-        messageArea.innerHTML = 'Такого города не существет. Попробуйте еще раз!';
+        messageArea.innerHTML = 'Такого города не существует. Попробуйте еще раз!';
         return; 
         }
     
@@ -31,11 +31,13 @@ function findAnswer() {
             }
         }  
     
-    //showCity(playerCity); 
+    showCity(playerCity); 
         
     var lastLetter = findLastLetter(playerCity); 
     var computerCity = findCity(lastLetter); 
     document.getElementById('out').innerHTML = computerCity;
+    showCity(computerCity); 
+    
     var lastFirst = computerCity[computerCity.length-1].toUpperCase();
     var newMessage = 'Введите название города на букву ' +  lastTitleLetter.toUpperCase() + '.';
     messageArea.innerHTML = newMessage;
@@ -115,7 +117,7 @@ function isCityUsed(name) {
 
 function stopGame(winner) {
     document.getElementById('end').style.visibility = 'visible';
-    document.getElementById('winner').innerHTML = 'Победил ' + winner;
+    document.getElementById('winner').innerHTML = 'Победил <span>' + winner + '</span>';
     
     var parent = document.getElementById('player');
     for (var i=0; i < cityHistory.length; i+=2) {

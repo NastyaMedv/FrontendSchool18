@@ -10,58 +10,40 @@ function init () {
         // При инициализации карты обязательно нужно указать
         // её центр и коэффициент масштабирования.
         center:[55.76, 37.64], // Москва
-        zoom:5
+        zoom:6
     });
 
-
+    myMap.controls
+        // Кнопка изменения масштаба.
+        .add('zoomControl', { left: 5, top: 5 })
+        // Список типов карты
+        .add('typeSelector');
 }
-
 
 function showCity(city) {
-    var myGeocoder = ymaps.geocode(city);
     
+    var myGeocoder = ymaps.geocode(city);
     myGeocoder.then(
-    function (res) {
-        //alert('Координаты объекта :' + res.geoObjects.get(0).geometry.getCoordinates());
-        
-        myPlacemark1 = new ymaps.Placemark(res.geoObjects.get(0).geometry.getCoordinates(), {
-            // Свойства.
-            // Содержимое иконки, балуна и хинта.
-            iconContent: '1',
-            balloonContent: 'Балун',
-            hintContent: 'Стандартный значок метки'
-        }, {
-            // Опции.
-            // Стандартная фиолетовая иконка.
-            preset: 'twirl#violetIcon'
-        })
-    },
-    function (err) {
-        alert('Ошибка');
-    }
-);   
-   
-   
-   
-   
-   
-   /* // Поиск координат центра Нижнего Новгорода.
-    ymaps.geocode(city, { results: 1 }).then(function (res) {
-        // Выбираем первый результат геокодирования.
-        var firstGeoObject = res.geoObjects.get(0),
-        // Создаем карту с нужным центром.
-            myMap = new ymaps.Map("map", {
-                center: firstGeoObject.geometry.getCoordinates(),
-                zoom: 5
-            });
-
-        
-    }, function (err) {
-        // Если геокодирование не удалось, сообщаем об ошибке.
-        alert(err.message);
-    });
-
-*/
-
-}
-
+        function (res) {
+            //alert('Координаты объекта :' + res.geoObjects.get(0).geometry.getCoordinates());
+            var coord = res.geoObjects.get(0).geometry.getCoordinates();
+            myMap.setCenter (coord, 7);
+            
+           var placemark = new ymaps.Placemark(coord, {
+                
+                iconContent: city
+                }, {
+                preset: "twirl#yellowStretchyIcon",
+                // Отключаем кнопку закрытия балуна.
+                balloonCloseButton: false,
+                // Балун будем открывать и закрывать кликом по иконке метки.
+                hideIconOnBalloonOpen: false
+                });
+            myMap.geoObjects.add(placemark);
+            
+        },
+        function (err) {
+            alert('Ошибка');
+        }
+    );   
+ }   
