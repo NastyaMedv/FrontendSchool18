@@ -1,0 +1,78 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    background-color: #FFCC00;
+    font-family: Arial;
+}
+
+.outer {
+    margin: 100px auto 100px auto;
+    padding: 50px;
+    width: 900px;
+    background-color: white;
+}
+
+#in, #out {
+    width: 300px;
+    border: 2px solid rgb(230, 20, 0);
+    height: 24px;
+    padding: 2px;
+}
+
+#button-check, #button-loss {
+    width: 80px;
+    float: left;
+    border: 2px solid rgb(230, 20, 0);
+    background-color: rgb(230, 20, 0);
+    color: white;
+    height: 24px;
+    padding: 2px;
+    margin-right: 10px;
+    text-align: center;
+    cursor: pointer !important;
+}
+
+#button-loss {
+    font-size: 11px;
+}
+
+#in {
+    margin-right: 10px;
+    float: left;
+}
+
+#out {
+    margin-left: 50px;
+    float: right;
+}
+
+.clear {
+    margin: 0px;
+    padding: 0px;
+    content: ".";
+    visibility: hidden;
+    clear: both; 
+    height: 0px;
+}
+
+#end {
+    visibility: hidden;
+}
+
+.end-list {
+    width: 450px;
+    margin: 0px;
+    padding: 0px;
+    float: left;
+}
+
+#computer, #player {
+    list-style-type: none;
+}
+
+#map {
+    width: 900px;
+    height: 300px;
+    margin-top: 50px;
+}

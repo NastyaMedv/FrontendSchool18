@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Игра в города</title>
+    <meta name="description" content="shri cities">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://api-maps.yandex.ru/2.0/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+    <script src="js/cities.js"></script>
+    <script src="js/alphabet.js"></script>
+    <script src="js/game.js"></script>
+    <!--<script src="js/map.js"></script>-->
+</head>
+<body>
+    
+    
+    <div class="outer">
+        <h3 id="message"> Введите название города   </h3>
+        <input id="in" placeholder='Введите название города' ></input>
+        <div id="button-check" onclick="findAnswer();">Ввод</div>
+        <div id="button-loss" onclick="stopGame('Компьютер');">Я не знаю <br>такого города</div>
+        <div id="out" ></div>
+        <div class="clear" ></div>
+        <div id="map">
+            
+        </div>
+    </div>
+        
+    <div class="outer"  id="end">
+        <h3 id="winner"></h3>
+        <div class="end-list">
+            <h4>Города, названные игроком:</h4>
+            <ul id="player"></ul>
+        </div>
+        <div class="end-list">
+            <h4>Города, названные компьютером:</h4>
+            <ul id="computer"></ul>
+        </div>   
+        <div class="clear" ></div>
+    </div>
+
+    
+    
+    
+</body>
+</html>
