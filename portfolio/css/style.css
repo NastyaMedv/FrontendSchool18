@@ -1,0 +1,273 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial;
+}
+
+p {
+    font-family: Goergia;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 40px;
+    width: 464px;
+    margin: 0px;
+    color: white;
+    float: right;
+}
+
+h1 small {
+    font-weight: normal;
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 40px;
+    color: black;
+}
+
+h4 {
+    font-size: 24px;
+    margin: 0px;
+    color: black;
+    display: block
+}
+
+h4 small {
+    font-size: 16px;
+    color: #DD3E18;
+    line-height: 24px;
+    font-family: Goergia;
+    font-weight: normal;
+    font-family: Georgia;
+}
+
+.clear {
+    margin: 0px;
+    padding: 0px;
+    content: ".";
+    visibility: hidden;
+    clear: both; 
+    height: 0px;
+}
+
+.center {
+    width: 944px;
+    margin: 0px auto 0px auto;
+    padding: 0px 40px 0px 40px;
+}
+
+header {
+    margin: 0px 0px 100px 0px;
+    padding: 0px;
+    background-color: #082841;
+}
+
+#my-photo {
+    background-image: url('../img/i.jpg');
+    float: left;
+    width: 424px;
+    height: 768px;
+    margin: 0px 0px 0px -40px;
+}
+
+#about {
+    color: white;
+    width: 464px;
+    float: right;
+    margin: 266px 0px 0px 0px;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+#expectations {
+    position: relative;
+}
+
+#expectations p {
+    padding: 0px 0px 0px 0px;
+    position: absolute;
+    bottom: 0px;
+    font-family: Georgia;
+    font-size: 16px;
+    color: #000000;
+    line-height: 24px;
+}
+
+#exp1, #exp2, #exp3, #exp4 {
+    background-color: #e7f0ea;
+    background-image: linear-gradient(-180deg, #E6F0F0 0%, #E9F0E6 100%);
+    border-radius: 4px;
+    float: left;
+    padding: 30px;
+    height: 160px;
+    position: relative;
+}
+
+#exp1 {
+    width: 484px;
+    margin: 0px 10px 10px 0px;
+}
+
+#exp2 {
+    width: 328px;
+    margin: 0px 0px 10px 0px;
+}
+
+#exp3 {
+    width: 328px;
+    margin: 0px 10px 10px 0px;
+}
+
+#exp4 {
+    width: 484px;
+    margin: 0px 0px 10px 0px;
+}
+
+#my-works {
+    margin: 100px 0px 0px 0px;
+}
+
+.work-left, .work-right {
+    margin: 0px 0px 150px 0px;
+}
+
+.work-left {
+    width: 304px;
+    float: right;
+}
+
+.work-right  {
+    width: 304px;
+    float: left;
+}
+
+.about-work-right, .about-work-left  {
+    margin: 0px;
+    padding: 160px 0px 0px 0px;
+    opacity: 0.8;
+    font-family: Georgia;
+    font-size: 16px;
+    color: #000000;
+    line-height: 24px;
+}
+
+.work-left-img {
+    float: left;
+    width: 544px;
+    box-shadow: 0px 0px 20px #c0c0c0;
+}
+
+.work-right-img {
+    float: right;
+    width:544px;
+    box-shadow: 0px 0px 20px #c0c0c0;
+}
+
+footer {
+    margin: 0px 0px 0px 0px;
+    padding: 20px 0px 20px 0px;
+    background-color: #e6f0ef;
+    background-image: linear-gradient(-180deg, #E6F0F0 0%, #E9F0E6 100%);
+}
+
+#info {
+    width: 304px;
+    float: left;
+    position: relative;
+}
+
+#info p {
+    margin: 0px 0px 10px 0px;
+    line-height: 24px;
+    width: 304px;
+}
+
+#links {
+    width: 304px;
+    float: left;
+    position: relative;
+}
+
+#links ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+#links li {
+    list-style-type: none;
+    padding: 0px 0px 0px 15px;
+    font-family: Georgia;
+    font-size: 16px;
+    color: #DD3E18;
+    line-height: 32px;
+}
+
+a {
+    color: #e0583d;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #e0583d;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #e0583d;
+    text-decoration: none;
+}
+
+#links li::before {
+position: relative;
+content: '';
+border: 10px solid #cfd7d3;
+height: 0px;
+left: -15px;
+top: -8px;
+font-size: 0px;
+}
+
+form {
+    margin: 0px;
+    padding: 0px;
+    width: 544px;
+    float: right;
+}
+
+input {
+    width: 516px;
+    margin: 0px 0px 24px 0px;
+    padding: 12px;
+    font-size: 20px;
+}
+
+.formavvod {
+    height: 24px;
+
+}
+
+textarea {
+    margin: 0px 0px 24px 0px;
+    padding: 12px;
+    font-size: 20px;
+    width: 516px;
+    height: 174px;
+}
+
+.formaknopka {
+width: 544px;
+border: none;
+background: #DD3E18;
+border-radius: 4px;
+border: 2px solid #e0583d;
+color:  white;
+font-size: 24px;
+padding: 5px 10px 5px 10px;
+}
+
+.formaknopka:hover {
+border: 2px solid white;
+}
